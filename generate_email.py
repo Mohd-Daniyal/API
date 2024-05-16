@@ -65,7 +65,7 @@ def generate_email(email, company_info="", company_name="") -> str:
     else:
         return "Something went wrong "
 
-def save_message_to_file(message, folder_name="generations", file_name="generated_email.txt"):
+def save_message_to_file(message, folder_name="/tmp/generations", file_name="generated_email.txt"):
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
 

@@ -1,6 +1,6 @@
 def fetch_user_info_from_email(email):
     
-    filename = f"generations/{email}_resume.txt"
+    filename = f"/tmp/generations/{email}_resume.txt"
 
     try:
         with open(filename, 'r',encoding='utf-8') as file:

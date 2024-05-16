@@ -25,7 +25,7 @@ def get_company_info_from_name(company_name):
 def get_cleaned_info_from_scrapped_webpage(text_content):
     llm_prompt = prepare_llm_prompt(text_content)
     cleaned_company_info = clean_company_info_with_llm(llm_prompt)
-    filename = os.path.join("generations", 'company_cleaned_info.txt')
+    filename = os.path.join("/tmp/generations", 'company_cleaned_info.txt')
 
     with open(filename, 'w', encoding='utf-8') as file:
         file.write(cleaned_company_info)

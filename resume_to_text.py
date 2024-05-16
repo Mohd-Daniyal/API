@@ -27,17 +27,17 @@ def convert_pdf_to_text(pdf_filename):
 
 def save_text_to_file(pdf_filename, text):
     # Create the "generations" folder if it doesn't exist
-    if not os.path.exists("generations"):
-        os.makedirs("generations")
+    if not os.path.exists("/tmp/generations"):
+        os.makedirs("/tmp/generations")
 
     # Create a text file with the same name as the PDF in the "generations" folder
-    txt_filename = os.path.join("generations", os.path.splitext(os.path.basename(pdf_filename))[0] + ".txt")
+    txt_filename = os.path.join("/tmp/generations", os.path.splitext(os.path.basename(pdf_filename))[0] + ".txt")
     with open(txt_filename, 'w', encoding='utf-8') as txt_file:
         txt_file.write(text)
     print(f"Text extracted and saved to '{txt_filename}'.")
 
 def main():
-    pdf_filename = "generations/None_resume.pdf"
+    pdf_filename = "/tmp/generations/None_resume.pdf"
     convert_pdf_to_text(pdf_filename)
 
 if __name__ == "__main__":
