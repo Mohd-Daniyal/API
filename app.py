@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
+CORS(app, resources={r'*': {'origins': '*'}})
 
 @app.route('/upload-resume', methods=['POST'])
 def upload_resume():
