@@ -10,7 +10,7 @@ load_dotenv()
 app = Flask(__name__)
 
 @app.route('/upload-resume', methods=['POST'])
-@cross_origin()
+@cross_origin(origins=['http://localhost:3000/'])
 def upload_resume():
     email_id = request.form.get('email_id')
     resume_file = request.files['resume']
