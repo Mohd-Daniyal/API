@@ -16,7 +16,7 @@ def upload_resume():
     resume_file = request.files['resume']
     company_name = request.form.get('company_name')
     
-    resume_directory = 'generations'
+    resume_directory = '/tmp/generations'
     os.makedirs(resume_directory, exist_ok=True)
     resume_path = os.path.join(resume_directory, f"{email_id}_resume.pdf")
     
