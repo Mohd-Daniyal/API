@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import os
 from resume_to_text import convert_pdf_to_text
 from generate_email import generate_email
@@ -8,9 +8,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:3000/'])
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/upload-resume', methods=['POST'])
+@cross_origin()
 def upload_resume():
     email_id = request.form.get('email_id')
     resume_file = request.files['resume']
