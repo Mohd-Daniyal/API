@@ -10,7 +10,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # Update this with your actual Netlify app URL
-cors = CORS(app, resources={r"/upload-resume": {"origins": "https://cold-craft.vercel.app/"}})
+cors = CORS(app, resources={r"/*": {"origins": "https://cold-craft.vercel.app/"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/upload-resume', methods=['POST'])
