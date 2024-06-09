@@ -61,14 +61,3 @@ def get_extract_from_metaphor(company_name: str):
             print("Error while fetching metaphor content:", str(e))
 
     return None
-
-def main():
-    company_name = "Pine Labs"
-    # print(search_metaphor(company_name))
-    extract = get_extract_from_metaphor(company_name)
-
-    if extract:
-        # print("Extract for the company:")
-        print(extract)
-    else:
-        print("Metaphor data not found for the company.")
