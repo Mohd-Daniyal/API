@@ -11,14 +11,6 @@ app = Flask(__name__)
 
 cors = CORS(app, resources={r"/*": {"origins": "https://cold-craft.vercel.app/"}})
 
-@app.after_request
-def apply_cors(response):
-    print("Applying CORS headers")
-    response.headers.add('Access-Control-Allow-Origin', 'https://cold-craft.vercel.app')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS')
-    return response
-
 @app.route('/upload-resume', methods=['POST'])
 @cross_origin()
 def upload_resume():
