@@ -32,7 +32,3 @@ def get_cleaned_info_from_scrapped_webpage(text_content):
 
     print(f'Text content saved to "{filename}"')
     return cleaned_company_info
-
-if __name__ == '__main__':
-    company_name = "Amdocs"
-    get_company_info_from_name(company_name)

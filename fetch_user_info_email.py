@@ -19,7 +19,3 @@ def fetch_user_info_from_email(email):
         error = f"An error occurred: {str(e)}"
         print(error)
         return error
-
-
-if __name__ == "__main__":
-    fetch_user_info_from_email("None")

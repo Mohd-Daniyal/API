@@ -39,6 +39,3 @@ def save_text_to_file(pdf_filename, text):
 def main():
     pdf_filename = "/tmp/generations/None_resume.pdf"
     convert_pdf_to_text(pdf_filename)
-
-if __name__ == "__main__":
-    main()

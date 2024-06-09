@@ -17,9 +17,3 @@ def fetch_gemini_response(user_prompt: str):
         # Handle the exception and return a 500 status code
         error_message = f"An error occurred: {str(e)}"
         return error_message
-
-
-if __name__ == "__main__":
-    # Fetch the response from the Gemini API
-    response = fetch_gemini_response("Hello maadlee")
-    print(response)

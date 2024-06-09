@@ -73,8 +73,3 @@ def save_message_to_file(message, folder_name="/tmp/generations", file_name="gen
     with open(file_path, "w") as file:
         file.write(message)
     print(f"Message saved to {file_path}")
-
-
-if __name__ == "__main__":
-    message = generate_email("None","Dayar is a trading company","Dayar")
-    print(message)

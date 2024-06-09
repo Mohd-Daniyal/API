@@ -72,6 +72,3 @@ def main():
         print(extract)
     else:
         print("Metaphor data not found for the company.")
-
-if __name__ == "__main__":
-    main()
